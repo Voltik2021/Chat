@@ -4,7 +4,7 @@ class MessChat extends PureComponent {
     
     render() {
         return (            
-              <div>
+              <div className = "masslist">
                   {this.props.arrMess.map((item) => <div key = {item.id}><p>{item.name}</p><p>{item.text}</p></div>)}
               </div>            
         )

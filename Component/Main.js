@@ -20,8 +20,6 @@ class Chat extends PureComponent {
                 this.setState({arrMess:data})
             })
         }
-        console.log(this.state.arrMess)
-
     }
     
     linkData = () => {
@@ -41,14 +39,15 @@ class Chat extends PureComponent {
 
     render() {
         return (
-            <> 
-                {this.state.arrChat.map((item) => <ListChat key = {item.id} {...item} onClick = {this.onClick}/>)}                
-                <MessChat arrMess = {this.state.arrMess}/>
-                
-            </>
+            <div className = "MainDiv">
+                <div className = "listDiv"> 
+                    {this.state.arrChat.map((item) => <ListChat key = {item.id} {...item} onClick = {this.onClick}/>)} 
+                </div>
+                <div className = "mass">
+                    <MessChat arrMess = {this.state.arrMess}/>
+                </div>                
+            </div>
         )
-    }
-
-                
+    }              
 }
 export default Chat
